@@ -6,9 +6,10 @@ Report to me if this also works on other models.
 If at any stage script fails, you will be advised to reconnect device.
 Increasing MAX_TIMEOUT in main.py can also help.
 
-
 Voice packs for STYT02JYM can be downloaded here:
 https://4pda.to/forum/index.php?showtopic=969411&st=0#Spoil-89900251-3
+
+Before launching script, install dependencies with install.bat or install.sh
 
 Contacts:
 Mail: ryze312@tutanota.com
