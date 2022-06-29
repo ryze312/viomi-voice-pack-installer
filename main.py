@@ -44,6 +44,10 @@ try_func("Waiting for device", client.wait_and_get_device)
 try_func("Backing up original sounds", client.pull_dir, "/usr/share/audio/mandarin/", BACKUP_DIR)
 try_func("Deleting original sounds", client.shell, "rm /usr/share/audio/mandarin/*")
 
+if os.path.isdir(BACKUP_DIR):
+    for file in os.listdir(BACKUP_DIR):
+        os.remove(f"{BACKUP_DIR}/{file}")
+
 for file in os.listdir(pack):
     if file.endswith(".mp3"):
         try_func(f"Copying {file}", client.push, f"{pack}/{file}", "/usr/share/audio/mandarin/")

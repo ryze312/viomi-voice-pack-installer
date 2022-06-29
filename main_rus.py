@@ -42,12 +42,17 @@ try_func("Отключение службы robotManager", client.remove, "/etc/
 
 input("Переподключите устройство и нажмите Enter")
 try_func("Ожидание устройства", client.wait_and_get_device)
+
+if os.path.isdir(BACKUP_DIR):
+    for file in os.listdir(BACKUP_DIR):
+        os.remove(f"{BACKUP_DIR}/{file}")
+
 try_func("Бэкап оригинальных звуков", client.pull_dir, "/usr/share/audio/mandarin/", BACKUP_DIR)
 try_func("Удаление оригинальных звуков", client.shell, "rm /usr/share/audio/mandarin/*")
 
 for file in os.listdir(pack):
     if file.endswith(".mp3"):
-        try_func(f"Копирование {file}", client.push, f"{pack}/{file}", "/usr/share/audio/mandarin/")
+        try_func(f"Копирование {file}", client.push, f"{pack}/{file}", "/usr/share/audio/mandarin")
 try_func("Включение службы robotManager", client.ln, "/etc/init.d/robotManager", "/etc/rc.d/S90robotManager")
 
 print("Готово!")

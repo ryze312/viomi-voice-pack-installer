@@ -39,7 +39,7 @@ class Client:
         if not os.path.isdir(local_path):
             os.mkdir(local_path)
 
-        files = self.device.sync.list(remote_path)[2:]
+        files = self.device.sync.list(remote_path)[2:]  # Skipping . and ..
 
         for file in files:
             self.pull_file(remote_path + f"/{file.path}", local_path + f"/{file.path}")
