@@ -29,7 +29,7 @@ def try_func(entry, func, *args):
 picker = PackPicker(PACK_DIR)
 client = Client(MAX_TIMEOUT)
 
-print("Замена голосовых пакетов")
+print("Установщик голосовых пакетов")
 print("Автор: ryze312")
 print("ПРОВЕРЕНО только на Viomi STYT02JYM.")
 print("Смотрите в README_RUS.\n")

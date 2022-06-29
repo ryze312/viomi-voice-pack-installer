@@ -29,7 +29,7 @@ def try_func(entry, func, *args):
 picker = PackPicker(PACK_DIR)
 client = Client(MAX_TIMEOUT)
 
-print("Voice pack replacer by ryze312")
+print("Voice pack installer by ryze312")
 print("TESTED only on Viomi STYT02JYM.")
 print("Check README for more info.\n")
 
