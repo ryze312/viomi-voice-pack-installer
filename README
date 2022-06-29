@@ -10,6 +10,7 @@ Voice packs for STYT02JYM can be downloaded here:
 https://4pda.to/forum/index.php?showtopic=969411&st=0#Spoil-89900251-3
 
 Before launching script, install dependencies with install.bat or install.sh
+All packs by default go into "Packs" directory, change PACK_DIR variable if you wish to use different path
 
 Contacts:
 Mail: ryze312@tutanota.com
